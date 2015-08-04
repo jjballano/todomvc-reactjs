@@ -1,10 +1,22 @@
 var Task = require('./task.jsx');
 
 var ToDo = React.createClass({
+  componentDidMount: function(){
+    console.log(this.refs.one.getDOMNode());
+    /*
+    This will print:
+
+    <li data-reactid=".0.0">
+      <input type="checkbox" checked/>
+      Introduction
+    </li>
+    */
+  },
   render: function() {
   	return (
   	  <ul>
-  	    <Task name='Introduction' done=true />
+        //Reference created in this.refs.one
+  	    <Task ref='one' name='Introduction' done=true />
   	    <Task name='Chapter 1 - First component' done=true />
   	    <Task name='Chapter 2 - Properties'/>
   	    <Task />
