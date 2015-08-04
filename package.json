@@ -1,0 +1,21 @@
+{
+  "name": "todomvc-react",
+  "version": "0.0.1",
+  "author": "jjballano",
+  "contributors": [
+    {
+      "name": "Jesus J. Ballano",
+      "email": "jjballano@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jjballano/todomvc-reactjs.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-react": "*"
+  }
+}
