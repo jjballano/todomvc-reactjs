@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('default', function(){
-  return gulp.src('template.jsx')
+  return gulp.src('app.jsx')
              .pipe(react())
              .pipe(gulp.dest('dist'));
 });
