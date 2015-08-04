@@ -18,7 +18,7 @@ var ToDo = React.createClass({
         <Tasks>
           //Tasks object will receive in this.props.children all of these Task objects
     	    <Task ref='one' name='Introduction' done=true /> //Reference created in this.refs.one
-  	      <Task name='Chapter 1 - First component' done=true />
+  	      <Task name='Chapter 1 - First component' done /> //it will send true in done property.
   	      <Task name='Chapter 2 - Properties'/>
   	      <Task />
         </Tasks>
