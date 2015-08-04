@@ -20,7 +20,7 @@ Result for this:
   <li><input type="checkbox" checked/>Introduction</li>
   <li><input type="checkbox" checked/>Chapter 1 - First component</li>
   <li><input type="checkbox"/>Chapter 2 - Properties</li>
-  <li><input type="checkbox"/>Unknown chapter</li>
+  <li><input type="checkbox"/></li> (and a warning in console)
 </ul>
 
 */
