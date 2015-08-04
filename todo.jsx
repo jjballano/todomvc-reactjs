@@ -15,11 +15,13 @@ var ToDo = React.createClass({
   render: function() {
   	return (
   	  <ul>
-        //Reference created in this.refs.one
-  	    <Task ref='one' name='Introduction' done=true />
-  	    <Task name='Chapter 1 - First component' done=true />
-  	    <Task name='Chapter 2 - Properties'/>
-  	    <Task />
+        <Tasks>
+          //Tasks object will receive in this.props.children all of these Task objects
+    	    <Task ref='one' name='Introduction' done=true /> //Reference created in this.refs.one
+  	      <Task name='Chapter 1 - First component' done=true />
+  	      <Task name='Chapter 2 - Properties'/>
+  	      <Task />
+        </Tasks>
   	  </ul>
   	);
   }
