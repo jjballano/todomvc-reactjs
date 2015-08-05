@@ -9,11 +9,20 @@ var Task = React.createClass({
       done: false
     });
   },
+  getInitialState: function(){
+    return({
+      updated: false
+    });
+  },
+  onUpdate: function(event){
+    updated: true
+  },
   render: function() {
     return(
       <li>       
-        <input type='checkbox {(this.props.done ? "checked" : "")}' />
+        <input type='checkbox {(this.props.done ? "checked" : "")}' onClick={this.onUpdate}/>
         {this.props.name}
+        { if this.state.update <small>Updated...</small>}
       </li>
     );
   },
