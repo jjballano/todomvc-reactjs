@@ -1,4 +1,6 @@
-var Task = require('./task.jsx');
+var Task = require('./task.jsx'),
+    Header = require('/components/header'),
+    Content = require('/components/content');    
 
 var ToDo = React.createClass({
   componentDidMount: function(){
@@ -14,15 +16,16 @@ var ToDo = React.createClass({
   },
   render: function() {
   	return (
-  	  <ul>
-        <Tasks>
+  	  <div>
+        <Header />
+        <Content>
           //Tasks object will receive in this.props.children all of these Task objects
     	    <Task ref='one' name='Introduction' done=true /> //Reference created in this.refs.one
   	      <Task name='Chapter 1 - First component' done /> //it will send true in done property.
   	      <Task name='Chapter 2 - Properties'/>
-  	      <Task />
         </Tasks>
-  	  </ul>
+        <footer>Copyright...</footer>
+  	  </div>
   	);
   }
 });
@@ -30,11 +33,19 @@ var ToDo = React.createClass({
 /*
 Result for this:
 
-<ul>
-  <li><input type="checkbox" checked/>Introduction</li>
-  <li><input type="checkbox" checked/>Chapter 1 - First component</li>
-  <li><input type="checkbox"/>Chapter 2 - Properties</li>
-  <li><input type="checkbox"/></li> (and a warning in console)
+<div>
+  <header>
+    <a href="#pending">pending</a>
+    <a href="#done">done</a>
+    <a href="#all">all</a>
+  </header>
+  <ul>
+    <li><input type=“checkbox” checked/>Introduction</li>
+    <li><input type=“checkbox” checked/>Chapter 1 - First component</li>
+    <li><input type=“checkbox”/>‘Chapter 2 - Properties</li>
+    <span>Tasks: 3</span>
 </ul>
+  <footer>Copyright...</footer>
+</div>
 
 */
