@@ -19,7 +19,7 @@ module.exports = (function() {
     return this.find();
   };
 
-  Task.filter = function(){
+  Task.filter = function(completed){
     return this.find(function(instance){
       if (completed == instance.completed) {
         return instance;

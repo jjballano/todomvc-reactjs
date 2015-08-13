@@ -1,8 +1,13 @@
-var React = require('react');
+var React = require('react'),
+    Task = require('../models/task');
 
 module.exports = React.createClass({
   onKeyDown: function(event){
-
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      new Task({name: event.target.value});
+      event.target.value = '';
+    }
   },
   
   render: function() {
